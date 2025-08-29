@@ -111,6 +111,109 @@ const modules = [
   }
 ]
 
+// Legacy Mock Modules for Testing & Development
+const legacyMockModules = [
+  {
+    id: 'clinical-core',
+    title: 'Clinical Core (Original)',
+    description: 'Original clinical workflow implementation with comprehensive patient case management',
+    icon: Activity,
+    status: 'development',
+    features: ['Case Management', 'Clinical Workflow', 'Patient Records', 'Treatment Planning'],
+    href: '/legacy-mocks/clinical-core',
+    color: 'bg-slate-50 border-slate-200',
+    iconColor: 'text-slate-600'
+  },
+  {
+    id: 'clinical-core-alt',
+    title: 'Clinical Core (Alternative)',
+    description: 'Alternative clinical interface design with enhanced user experience patterns',
+    icon: Activity,
+    status: 'development',
+    features: ['Enhanced UX', 'Alternative Layout', 'Workflow Testing', 'Design Patterns'],
+    href: '/legacy-mocks/clinical-core-alt',
+    color: 'bg-teal-50 border-teal-200',
+    iconColor: 'text-teal-600'
+  },
+  {
+    id: 'patient-core-detailed',
+    title: 'Patient Core (Detailed)',
+    description: 'Comprehensive patient management with detailed information architecture',
+    icon: Users,
+    status: 'development',
+    features: ['Detailed Records', 'Complex Workflows', 'Information Architecture', 'Data Management'],
+    href: '/legacy-mocks/patient-core-detailed',
+    color: 'bg-purple-50 border-purple-200',
+    iconColor: 'text-purple-600'
+  },
+  {
+    id: 'patient-core-sleek',
+    title: 'Patient Core (Sleek)',
+    description: 'Streamlined patient interface focused on essential information and quick actions',
+    icon: Users,
+    status: 'development',
+    features: ['Minimal Design', 'Quick Actions', 'Essential Info', 'Streamlined UX'],
+    href: '/legacy-mocks/patient-core-sleek',
+    color: 'bg-rose-50 border-rose-200',
+    iconColor: 'text-rose-600'
+  },
+  {
+    id: 'financial-core',
+    title: 'Financial Core (Legacy)',
+    description: 'Original financial management system with comprehensive accounting features',
+    icon: DollarSign,
+    status: 'development',
+    features: ['Accounting', 'Revenue Tracking', 'Financial Reports', 'Legacy Features'],
+    href: '/legacy-mocks/financial-core',
+    color: 'bg-green-50 border-green-200',
+    iconColor: 'text-green-600'
+  },
+  {
+    id: 'scheduling-core',
+    title: 'Scheduling Core (Legacy)',
+    description: 'Original scheduling system with appointment management and resource allocation',
+    icon: Calendar,
+    status: 'development',
+    features: ['Appointment Management', 'Resource Allocation', 'Legacy Interface', 'Scheduling Logic'],
+    href: '/legacy-mocks/scheduling-core',
+    color: 'bg-blue-50 border-blue-200',
+    iconColor: 'text-blue-600'
+  },
+  {
+    id: 'communication-core',
+    title: 'Communication Core (Legacy)',
+    description: 'Original patient communication system with messaging and notification features',
+    icon: MessageSquare,
+    status: 'development',
+    features: ['Patient Messaging', 'Notifications', 'Communication Hub', 'Legacy Features'],
+    href: '/legacy-mocks/communication-core',
+    color: 'bg-indigo-50 border-indigo-200',
+    iconColor: 'text-indigo-600'
+  },
+  {
+    id: 'prescription-core',
+    title: 'Prescription Core (Legacy)',
+    description: 'Original digital prescription system with drug database and pharmacy integration',
+    icon: Pill,
+    status: 'development',
+    features: ['Digital Prescriptions', 'Drug Database', 'Pharmacy Integration', 'Legacy Interface'],
+    href: '/legacy-mocks/prescription-core',
+    color: 'bg-pink-50 border-pink-200',
+    iconColor: 'text-pink-600'
+  },
+  {
+    id: 'inventory-core',
+    title: 'Inventory Core (Legacy)',
+    description: 'Original inventory management system with stock tracking and supplier management',
+    icon: Package,
+    status: 'development',
+    features: ['Stock Management', 'Supplier Relations', 'Inventory Tracking', 'Legacy Features'],
+    href: '/legacy-mocks/inventory-core',
+    color: 'bg-amber-50 border-amber-200',
+    iconColor: 'text-amber-600'
+  }
+]
+
 const DashboardLanding = () => {
   return (
     <div className="min-h-screen bg-slate-50">
@@ -249,6 +352,66 @@ const DashboardLanding = () => {
               </Link>
             )
           })}
+        </div>
+
+        {/* Legacy Mock Modules Section */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Development Prototypes & Legacy Modules
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Explore different implementations and design approaches for testing and comparison
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {legacyMockModules.map((module) => {
+              const IconComponent = module.icon
+              return (
+                <Link key={module.id} href={module.href}>
+                  <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 border-dashed`}>
+                    <CardHeader className="pb-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className={`p-3 rounded-lg bg-white ${module.iconColor}`}>
+                            <IconComponent className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <CardTitle className="text-lg">{module.title}</CardTitle>
+                            <Badge className="bg-yellow-100 text-yellow-800">
+                              <Clock className="h-3 w-3 mr-1" />
+                              Prototype
+                            </Badge>
+                          </div>
+                        </div>
+                        <ArrowRight className="h-5 w-5 text-slate-400" />
+                      </div>
+                    </CardHeader>
+                    
+                    <CardContent className="pt-0">
+                      <p className="text-slate-700 mb-4">
+                        {module.description}
+                      </p>
+                      
+                      {/* Feature List */}
+                      <div className="space-y-2">
+                        <div className="text-sm font-medium text-slate-600 mb-2">Features:</div>
+                        <div className="grid grid-cols-2 gap-2">
+                          {module.features.map((feature, index) => (
+                            <div key={index} className="flex items-center gap-2">
+                              <CheckCircle2 className="h-3 w-3 text-yellow-600" />
+                              <span className="text-xs text-slate-600">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              )
+            })}
+          </div>
         </div>
 
         {/* Development Notes */}

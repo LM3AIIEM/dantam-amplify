@@ -73,6 +73,7 @@ export default function DentalChartingSystem() {
   const [showTreatmentPlan, setShowTreatmentPlan] = useState(false);
   const [clinicalNotes, setClinicalNotes] = useState('');
 
+  const collapsedQuadrants = []; // initialize so build doesn't break
   const toggleQuadrant = (quadrantKey) => {
     setCollapsedQuadrants(prev => ({
       ...prev,
