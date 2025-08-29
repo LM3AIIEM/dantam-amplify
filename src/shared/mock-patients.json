@@ -1,0 +1,320 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Priya Sharma",
+      "age": 34,
+      "dateOfBirth": "1990-03-15",
+      "gender": "Female",
+      "phone": "+91 98765 43210",
+      "alternatePhone": "+91 98765 43211",
+      "email": "priya.sharma@email.com",
+      "address": {
+        "street": "123 MG Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "zip": "560001"
+      },
+      "lastVisit": "2024-01-15",
+      "nextAppt": "2024-02-20",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": ["Penicillin allergy"],
+      "family": 2,
+      "familyMembers": [2],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "whatsapp",
+      "emergencyContact": {
+        "name": "Rajesh Sharma",
+        "relationship": "Spouse",
+        "phone": "+91 98765 43212"
+      },
+      "insuranceInfo": {
+        "provider": "Star Health Insurance",
+        "policyNumber": "SH123456789",
+        "groupNumber": "GRP-0001",
+        "effectiveDate": "2023-01-01",
+        "expirationDate": "2025-12-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Penicillin", "Peanuts"],
+        "medications": ["Amlodipine 5mg daily", "Vitamin D3 60K weekly"],
+        "conditions": ["Hypertension", "Seasonal allergies"],
+        "surgeries": ["Appendectomy (2015)"],
+        "familyHistory": ["Father: Diabetes Type 2", "Mother: Hypertension"]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Arjun Patel",
+      "age": 45,
+      "dateOfBirth": "1979-07-22",
+      "gender": "Male",
+      "phone": "+91 88889 99999",
+      "email": "arjun.patel@email.com",
+      "address": {
+        "street": "456 Brigade Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "zip": "560025"
+      },
+      "lastVisit": "2024-01-22",
+      "nextAppt": null,
+      "status": "needs-followup",
+      "insuranceStatus": "pending",
+      "balance": 2850,
+      "medicalAlerts": [],
+      "family": 3,
+      "familyMembers": [6, 7],
+      "avatar": null,
+      "preferredLanguage": "Hindi",
+      "preferredContactMethod": "phone",
+      "emergencyContact": {
+        "name": "Kavita Patel",
+        "relationship": "Wife",
+        "phone": "+91 88889 99998"
+      },
+      "insuranceInfo": {
+        "provider": "ICICI Lombard",
+        "policyNumber": "ICL987654321",
+        "groupNumber": "GRP-0002",
+        "effectiveDate": "2023-06-01",
+        "expirationDate": "2024-05-31"
+      },
+      "medicalHistory": {
+        "allergies": [],
+        "medications": ["Metformin 500mg twice daily"],
+        "conditions": ["Type 2 Diabetes", "High cholesterol"],
+        "surgeries": [],
+        "familyHistory": ["Mother: Heart disease", "Father: Stroke"]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Ananya Reddy",
+      "age": 28,
+      "dateOfBirth": "1996-01-10",
+      "gender": "Female",
+      "phone": "+91 77778 88888",
+      "email": "ananya.reddy@email.com",
+      "address": {
+        "street": "789 Jubilee Hills",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "zip": "500033"
+      },
+      "lastVisit": "2024-02-05",
+      "nextAppt": "2024-03-10",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": ["Diabetes", "Thyroid medication"],
+      "family": 1,
+      "familyMembers": [],
+      "avatar": null,
+      "preferredLanguage": "Telugu",
+      "preferredContactMethod": "email",
+      "emergencyContact": {
+        "name": "Lakshmi Reddy",
+        "relationship": "Mother",
+        "phone": "+91 77778 88889"
+      },
+      "insuranceInfo": {
+        "provider": "Max Bupa",
+        "policyNumber": "MB246810121",
+        "groupNumber": "GRP-0003",
+        "effectiveDate": "2024-01-01",
+        "expirationDate": "2024-12-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Latex", "Sulfa drugs"],
+        "medications": ["Insulin", "Thyronorm 50mcg daily"],
+        "conditions": ["Type 1 Diabetes", "Hypothyroidism"],
+        "surgeries": [],
+        "familyHistory": ["Mother: Diabetes", "Grandmother: Heart disease"]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Vikram Singh",
+      "age": 52,
+      "dateOfBirth": "1972-05-30",
+      "gender": "Male",
+      "phone": "+91 99998 77777",
+      "email": "vikram.singh@email.com",
+      "address": {
+        "street": "321 Connaught Place",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "zip": "110001"
+      },
+      "lastVisit": "2023-11-30",
+      "nextAppt": null,
+      "status": "inactive",
+      "insuranceStatus": "expired",
+      "balance": 15000,
+      "medicalAlerts": [],
+      "family": 4,
+      "familyMembers": [8, 9, 10],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "email",
+      "emergencyContact": {
+        "name": "Meera Singh",
+        "relationship": "Wife",
+        "phone": "+91 99998 77776"
+      },
+      "insuranceInfo": {
+        "provider": "Bajaj Allianz",
+        "policyNumber": "BA135792468",
+        "groupNumber": "GRP-0004",
+        "effectiveDate": "2022-01-01",
+        "expirationDate": "2023-12-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Aspirin"],
+        "medications": ["Atorvastatin 20mg daily"],
+        "conditions": ["High cholesterol"],
+        "surgeries": ["Knee replacement (2021)"],
+        "familyHistory": ["Father: Heart attack at 65"]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Sneha Gupta",
+      "age": 31,
+      "dateOfBirth": "1993-09-18",
+      "gender": "Female",
+      "phone": "+91 66667 77777",
+      "email": "sneha.gupta@email.com",
+      "address": {
+        "street": "654 Park Street",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "zip": "700016"
+      },
+      "lastVisit": "2024-02-08",
+      "nextAppt": "2024-02-25",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": [],
+      "family": 1,
+      "familyMembers": [],
+      "avatar": null,
+      "preferredLanguage": "Bengali",
+      "preferredContactMethod": "whatsapp",
+      "emergencyContact": {
+        "name": "Rohit Gupta",
+        "relationship": "Brother",
+        "phone": "+91 66667 77778"
+      },
+      "insuranceInfo": {
+        "provider": "Religare Health",
+        "policyNumber": "RH864209753",
+        "groupNumber": "GRP-0005",
+        "effectiveDate": "2023-03-01",
+        "expirationDate": "2025-02-28"
+      },
+      "medicalHistory": {
+        "allergies": [],
+        "medications": ["Birth control", "Multivitamin"],
+        "conditions": ["Asthma (mild)"],
+        "surgeries": [],
+        "familyHistory": ["Mother: Breast cancer survivor"]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Neha Patel",
+      "age": 12,
+      "dateOfBirth": "2012-11-20",
+      "gender": "Female",
+      "phone": "+91 88889 99999",
+      "email": "arjun.patel@email.com",
+      "address": {
+        "street": "456 Brigade Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "zip": "560025"
+      },
+      "lastVisit": "2024-01-22",
+      "nextAppt": "2024-03-15",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": ["Asthma"],
+      "family": 3,
+      "familyMembers": [2, 7],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "phone",
+      "emergencyContact": {
+        "name": "Arjun Patel",
+        "relationship": "Father",
+        "phone": "+91 88889 99999"
+      },
+      "insuranceInfo": {
+        "provider": "ICICI Lombard",
+        "policyNumber": "ICL987654321",
+        "groupNumber": "GRP-0002",
+        "effectiveDate": "2023-06-01",
+        "expirationDate": "2024-05-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Dust mites"],
+        "medications": ["Inhaler (as needed)"],
+        "conditions": ["Asthma"],
+        "surgeries": [],
+        "familyHistory": ["Grandfather: Diabetes"]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dev Patel",
+      "age": 8,
+      "dateOfBirth": "2016-06-15",
+      "gender": "Male",
+      "phone": "+91 88889 99999",
+      "email": "arjun.patel@email.com",
+      "address": {
+        "street": "456 Brigade Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "zip": "560025"
+      },
+      "lastVisit": "2024-01-22",
+      "nextAppt": null,
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": [],
+      "family": 3,
+      "familyMembers": [2, 6],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "phone",
+      "emergencyContact": {
+        "name": "Kavita Patel",
+        "relationship": "Mother",
+        "phone": "+91 88889 99998"
+      },
+      "insuranceInfo": {
+        "provider": "ICICI Lombard",
+        "policyNumber": "ICL987654321",
+        "groupNumber": "GRP-0002",
+        "effectiveDate": "2023-06-01",
+        "expirationDate": "2024-05-31"
+      },
+      "medicalHistory": {
+        "allergies": [],
+        "medications": [],
+        "conditions": [],
+        "surgeries": [],
+        "familyHistory": ["Grandfather: Diabetes"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "age": 34,
+      "dateOfBirth": "1990-03-15",
+      "gender": "Female",
+      "phone": "+1 (555) 123-4567",
+      "alternatePhone": "+1 (555) 123-4568",
+      "email": "sarah.j@email.com",
+      "address": {
+        "street": "123 Oak Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62701"
+      },
+      "lastVisit": "2024-01-15",
+      "nextAppt": "2024-02-20",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": ["Penicillin allergy"],
+      "family": 2,
+      "familyMembers": [2],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "email",
+      "emergencyContact": {
+        "name": "John Johnson",
+        "relationship": "Spouse",
+        "phone": "+1 (555) 123-4569"
+      },
+      "insuranceInfo": {
+        "provider": "Blue Cross Blue Shield",
+        "policyNumber": "BC123456789",
+        "groupNumber": "GRP-0001",
+        "effectiveDate": "2023-01-01",
+        "expirationDate": "2025-12-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Penicillin", "Peanuts"],
+        "medications": ["Lisinopril 10mg daily", "Vitamin D 2000IU daily"],
+        "conditions": ["Hypertension", "Seasonal allergies"],
+        "surgeries": ["Appendectomy (2015)"],
+        "familyHistory": ["Father: Diabetes Type 2", "Mother: Hypertension"]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "age": 45,
+      "dateOfBirth": "1979-07-22",
+      "gender": "Male",
+      "phone": "+1 (555) 987-6543",
+      "email": "m.chen@email.com",
+      "address": {
+        "street": "456 Elm Avenue",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62702"
+      },
+      "lastVisit": "2024-01-22",
+      "nextAppt": null,
+      "status": "needs-followup",
+      "insuranceStatus": "pending",
+      "balance": 285.50,
+      "medicalAlerts": [],
+      "family": 3,
+      "familyMembers": [6, 7],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "phone",
+      "emergencyContact": {
+        "name": "Lisa Chen",
+        "relationship": "Wife",
+        "phone": "+1 (555) 987-6544"
+      },
+      "insuranceInfo": {
+        "provider": "Aetna",
+        "policyNumber": "AET987654321",
+        "groupNumber": "GRP-0002",
+        "effectiveDate": "2023-06-01",
+        "expirationDate": "2024-05-31"
+      },
+      "medicalHistory": {
+        "allergies": [],
+        "medications": ["Metformin 500mg twice daily"],
+        "conditions": ["Type 2 Diabetes", "High cholesterol"],
+        "surgeries": [],
+        "familyHistory": ["Mother: Heart disease", "Father: Stroke"]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Emily Rodriguez",
+      "age": 28,
+      "dateOfBirth": "1996-01-10",
+      "gender": "Female",
+      "phone": "+1 (555) 456-7890",
+      "email": "emily.r@email.com",
+      "address": {
+        "street": "789 Pine Road",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62703"
+      },
+      "lastVisit": "2024-02-05",
+      "nextAppt": "2024-03-10",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": ["Diabetes", "Blood pressure medication"],
+      "family": 1,
+      "familyMembers": [],
+      "avatar": null,
+      "preferredLanguage": "Spanish",
+      "preferredContactMethod": "sms",
+      "emergencyContact": {
+        "name": "Maria Rodriguez",
+        "relationship": "Mother",
+        "phone": "+1 (555) 456-7891"
+      },
+      "insuranceInfo": {
+        "provider": "United Healthcare",
+        "policyNumber": "UHC246810121",
+        "groupNumber": "GRP-0003",
+        "effectiveDate": "2024-01-01",
+        "expirationDate": "2024-12-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Latex"],
+        "medications": ["Insulin", "Lisinopril 5mg daily"],
+        "conditions": ["Type 1 Diabetes", "Hypertension"],
+        "surgeries": [],
+        "familyHistory": ["Mother: Diabetes", "Grandmother: Heart disease"]
+      }
+    },
+    {
+      "id": 4,
+      "name": "David Wilson",
+      "age": 52,
+      "dateOfBirth": "1972-05-30",
+      "gender": "Male",
+      "phone": "+1 (555) 234-5678",
+      "email": "d.wilson@email.com",
+      "address": {
+        "street": "321 Maple Drive",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62704"
+      },
+      "lastVisit": "2023-11-30",
+      "nextAppt": null,
+      "status": "inactive",
+      "insuranceStatus": "expired",
+      "balance": 150.00,
+      "medicalAlerts": [],
+      "family": 4,
+      "familyMembers": [8, 9, 10],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "email",
+      "emergencyContact": {
+        "name": "Susan Wilson",
+        "relationship": "Wife",
+        "phone": "+1 (555) 234-5679"
+      },
+      "insuranceInfo": {
+        "provider": "Cigna",
+        "policyNumber": "CIG135792468",
+        "groupNumber": "GRP-0004",
+        "effectiveDate": "2022-01-01",
+        "expirationDate": "2023-12-31"
+      },
+      "medicalHistory": {
+        "allergies": ["Sulfa drugs"],
+        "medications": ["Atorvastatin 20mg daily"],
+        "conditions": ["High cholesterol"],
+        "surgeries": ["Knee replacement (2021)"],
+        "familyHistory": ["Father: Heart attack at 65"]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Jessica Park",
+      "age": 31,
+      "dateOfBirth": "1993-09-18",
+      "gender": "Female",
+      "phone": "+1 (555) 345-6789",
+      "email": "j.park@email.com",
+      "address": {
+        "street": "654 Cedar Lane",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62705"
+      },
+      "lastVisit": "2024-02-08",
+      "nextAppt": "2024-02-25",
+      "status": "active",
+      "insuranceStatus": "verified",
+      "balance": 0,
+      "medicalAlerts": [],
+      "family": 1,
+      "familyMembers": [],
+      "avatar": null,
+      "preferredLanguage": "English",
+      "preferredContactMethod": "email",
+      "emergencyContact": {
+        "name": "Robert Park",
+        "relationship": "Brother",
+        "phone": "+1 (555) 345-6790"
+      },
+      "insuranceInfo": {
+        "provider": "Anthem",
+        "policyNumber": "ANT864209753",
+        "groupNumber": "GRP-0005",
+        "effectiveDate": "2023-03-01",
+        "expirationDate": "2025-02-28"
+      },
+      "medicalHistory": {
+        "allergies": [],
+        "medications": ["Birth control", "Multivitamin"],
+        "conditions": ["Asthma (mild)"],
+        "surgeries": [],
+        "familyHistory": ["Mother: Breast cancer survivor"]
+      }
+    }
+  ],
+  "recentVisits": [
+    {
+      "patientId": 1,
+      "date": "2024-01-15",
+      "type": "Routine Checkup",
+      "provider": "Dr. Smith",
+      "notes": "Regular 6-month checkup, all vitals normal"
+    },
+    {
+      "patientId": 3,
+      "date": "2024-02-05",
+      "type": "Follow-up",
+      "provider": "Dr. Johnson",
+      "notes": "Diabetes management review, A1C improved"
+    }
+  ],
+  "communicationLog": [
+    {
+      "patientId": 1,
+      "date": "2024-02-10",
+      "type": "email",
+      "subject": "Appointment Reminder",
+      "status": "sent"
+    },
+    {
+      "patientId": 2,
+      "date": "2024-02-08",
+      "type": "sms",
+      "message": "Outstanding balance reminder",
+      "status": "delivered"
+    }
+  ],
+  "documents": [
+    {
+      "patientId": 1,
+      "type": "Insurance Card",
+      "uploadDate": "2023-01-15",
+      "expirationDate": "2025-12-31",
+      "status": "current"
+    },
+    {
+      "patientId": 1,
+      "type": "Consent Form",
+      "uploadDate": "2023-01-15",
+      "status": "signed"
+    }
+  ]
+}

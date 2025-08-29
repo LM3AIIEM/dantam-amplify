@@ -1,0 +1,29 @@
+{
+  "currentView": "list",
+  "selectedPatientId": null,
+  "searchQuery": "",
+  "activeTab": "all",
+  "detailTab": "overview",
+  "showNewPatientForm": false,
+  "newPatientStep": 1,
+  "filters": {
+    "status": "all",
+    "ageRange": null,
+    "hasBalance": false,
+    "insuranceStatus": "all"
+  },
+  "sort": {
+    "field": "name",
+    "direction": "asc"
+  },
+  "pagination": {
+    "page": 1,
+    "pageSize": 20,
+    "totalPages": 1
+  },
+  "ui": {
+    "isLoading": false,
+    "error": null,
+    "successMessage": null
+  }
+}

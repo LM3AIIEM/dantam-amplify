@@ -1,0 +1,21 @@
+{
+	"servers": {
+		"magic21st": {
+			"command": "npx",
+			"args": [
+				"@21st-dev/magic@0.1.0"
+			],
+			"env": {
+				"API_KEY": "${input:apiKey}"
+			},
+			"type": "stdio"
+		}
+	},
+	"inputs": [
+		{
+			"id": "apiKey",
+			"type": "promptString",
+			"description": "Enter your 21st.dev Magic API Key"
+		}
+	]
+}

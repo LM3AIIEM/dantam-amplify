@@ -1,0 +1,292 @@
+"use client"
+
+import React from 'react'
+import Link from 'next/link'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { 
+  Calendar, 
+  DollarSign, 
+  Users, 
+  Activity,
+  FileText,
+  BarChart3,
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  AlertTriangle,
+  MessageSquare,
+  Pill,
+  Package
+} from 'lucide-react'
+
+// DANTAM Dental Practice Management System
+// Landing Page - Module Navigation Dashboard
+
+const modules = [
+  {
+    id: 'scheduling',
+    title: 'Scheduling & Resource Management',
+    description: 'Intelligent appointment scheduling with real-time conflict detection and resource optimization',
+    icon: Calendar,
+    status: 'active',
+    features: ['Smart Scheduling', 'Conflict Detection', 'Resource Management', 'Chair Utilization'],
+    href: '/scheduling',
+    color: 'bg-blue-50 border-blue-200',
+    iconColor: 'text-blue-600',
+    progress: 95
+  },
+  {
+    id: 'finance',
+    title: 'Financial Management',
+    description: 'Comprehensive revenue cycle management, financial analytics, and reporting dashboard',
+    icon: DollarSign,
+    status: 'active',
+    features: ['Revenue Analytics', 'A/R Management', 'Financial Reporting', 'KPI Tracking'],
+    href: '/finance',
+    color: 'bg-green-50 border-green-200',
+    iconColor: 'text-green-600',
+    progress: 100
+  },
+  {
+    id: 'patients',
+    title: 'Patient Management',
+    description: 'Complete patient records, treatment history, and clinical documentation system',
+    icon: Users,
+    status: 'active',
+    features: ['Patient Records', 'Treatment History', 'Insurance Management', 'Communication'],
+    href: '/patients',
+    color: 'bg-purple-50 border-purple-200',
+    iconColor: 'text-purple-600',
+    progress: 85
+  },
+  {
+    id: 'charting',
+    title: 'Clinical Charting',
+    description: 'Advanced dental charting system with digital records and treatment planning',
+    icon: FileText,
+    status: 'active',
+    features: ['Digital Charting', 'Treatment Planning', 'Clinical Notes', 'Imaging Integration'],
+    href: '/clinical/1', // Opens unified view for Priya Sharma
+    color: 'bg-orange-50 border-orange-200',
+    iconColor: 'text-orange-600',
+    progress: 85
+  },
+  {
+    id: 'communication',
+    title: 'Communication Hub',
+    description: 'Multi-channel patient messaging, automated campaigns, and engagement analytics',
+    icon: MessageSquare,
+    status: 'active',
+    features: ['SMS & Email', 'WhatsApp Integration', 'Campaign Management', 'Analytics'],
+    href: '/communication',
+    color: 'bg-indigo-50 border-indigo-200',
+    iconColor: 'text-indigo-600',
+    progress: 80
+  },
+  {
+    id: 'prescriptions',
+    title: 'Digital Prescriptions',
+    description: 'Electronic prescription management with drug database and pharmacy integration',
+    icon: Pill,
+    status: 'active',
+    features: ['E-Prescriptions', 'Drug Database', 'Dosage Calculator', 'Pharmacy Integration'],
+    href: '/prescriptions',
+    color: 'bg-pink-50 border-pink-200',
+    iconColor: 'text-pink-600',
+    progress: 75
+  },
+  {
+    id: 'inventory',
+    title: 'Inventory Management',
+    description: 'Track supplies, equipment, and materials with automated reorder alerts',
+    icon: Package,
+    status: 'active',
+    features: ['Stock Tracking', 'Reorder Alerts', 'Expiration Monitoring', 'Vendor Management'],
+    href: '/inventory',
+    color: 'bg-amber-50 border-amber-200',
+    iconColor: 'text-amber-600',
+    progress: 70
+  }
+]
+
+const DashboardLanding = () => {
+  return (
+    <div className="min-h-screen bg-slate-50">
+      {/* Header */}
+      <div className="bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-slate-900 mb-4">
+              DANTAM Dental Practice Management
+            </h1>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Comprehensive suite of integrated modules for modern dental practice management
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* System Status Overview */}
+        <div className="mb-12">
+          <Card className="border-blue-200 bg-blue-50">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <BarChart3 className="h-6 w-6 text-blue-600" />
+                  <h2 className="text-xl font-semibold text-blue-900">System Status</h2>
+                </div>
+                <Badge className="bg-green-100 text-green-800">
+                  <CheckCircle2 className="h-4 w-4 mr-1" />
+                  All Systems Operational
+                </Badge>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">8</div>
+                  <div className="text-sm text-blue-700">Active Modules</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-600">0</div>
+                  <div className="text-sm text-blue-700">In Development</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">83%</div>
+                  <div className="text-sm text-blue-700">Overall Progress</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">16</div>
+                  <div className="text-sm text-blue-700">Components Ready</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Module Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+          {modules.map((module) => {
+            const IconComponent = module.icon
+            return (
+              <Link key={module.id} href={module.href}>
+                <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105`}>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className={`p-3 rounded-lg bg-white ${module.iconColor}`}>
+                          <IconComponent className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-lg">{module.title}</CardTitle>
+                          <Badge 
+                            className={
+                              module.status === 'active' 
+                                ? 'bg-green-100 text-green-800' 
+                                : module.status === 'disabled'
+                                  ? 'bg-gray-100 text-gray-600'
+                                  : 'bg-yellow-100 text-yellow-800'
+                            }
+                          >
+                            {module.status === 'active' ? (
+                              <>
+                                <CheckCircle2 className="h-3 w-3 mr-1" />
+                                Active
+                              </>
+                            ) : module.status === 'disabled' ? (
+                              <>
+                                <AlertTriangle className="h-3 w-3 mr-1" />
+                                Disabled
+                              </>
+                            ) : (
+                              <>
+                                <Clock className="h-3 w-3 mr-1" />
+                                Development
+                              </>
+                            )}
+                          </Badge>
+                        </div>
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-slate-400" />
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-0">
+                    <p className="text-slate-700 mb-4">
+                      {module.description}
+                    </p>
+                    
+                    {/* Progress Bar */}
+                    <div className="mb-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-slate-600">Development Progress</span>
+                        <span className="text-sm text-slate-600">{module.progress}%</span>
+                      </div>
+                      <div className="w-full bg-slate-200 rounded-full h-2">
+                        <div 
+                          className="bg-blue-600 h-2 rounded-full transition-all duration-500" 
+                          style={{ width: `${module.progress}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    {/* Feature List */}
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium text-slate-600 mb-2">Key Features:</div>
+                      <div className="grid grid-cols-2 gap-2">
+                        {module.features.map((feature, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <CheckCircle2 className="h-3 w-3 text-green-600" />
+                            <span className="text-xs text-slate-600">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            )
+          })}
+        </div>
+
+        {/* Development Notes */}
+        <Card className="border-amber-200 bg-amber-50">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-amber-800">
+              <AlertTriangle className="h-5 w-5" />
+              Development Status & Notes
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-amber-800 mb-2">🟢 Ready for Testing:</h4>
+                <ul className="text-sm text-amber-700 space-y-1">
+                  <li>• Scheduling module (refactored & optimized)</li>
+                  <li>• Finance module (100% refactored, 79% size reduction)</li>
+                  <li>• Clinical Charting (interactive tooth diagrams)</li>
+                  <li>• Communication Hub (multi-channel messaging)</li>
+                  <li>• Digital Prescriptions (e-prescription system)</li>
+                  <li>• Inventory Management (stock tracking & alerts)</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-amber-800 mb-2">🟡 Next Steps:</h4>
+                <ul className="text-sm text-amber-700 space-y-1">
+                  <li>• Refactor Patient Management module</li>
+                  <li>• Apply systematic refactoring to new modules</li>
+                  <li>• Cross-module integration testing</li>
+                  <li>• Performance optimization</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  )
+}
+
+export default DashboardLanding
