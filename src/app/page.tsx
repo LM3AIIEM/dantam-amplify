@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { GlowingEffect } from '@/components/ui/glowing-effect'
 import { 
   Calendar, 
   DollarSign, 
@@ -238,8 +239,18 @@ const DashboardLanding = () => {
           {modules.map((module) => {
             const IconComponent = module.icon
             return (
-              <Link key={module.id} href={module.href}>
-                <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105`}>
+              <div key={module.id} className="relative">
+                <GlowingEffect
+                  spread={30}
+                  glow={true}
+                  disabled={false}
+                  proximity={48}
+                  inactiveZone={0.1}
+                  borderWidth={2}
+                  movementDuration={1.5}
+                />
+                <Link href={module.href}>
+                  <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 relative`}>
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
@@ -311,9 +322,10 @@ const DashboardLanding = () => {
                         ))}
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-              </Link>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </div>
             )
           })}
         </div>
@@ -333,8 +345,19 @@ const DashboardLanding = () => {
             {legacyMockModules.map((module) => {
               const IconComponent = module.icon
               return (
-                <Link key={module.id} href={module.href}>
-                  <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 border-dashed`}>
+                <div key={module.id} className="relative">
+                  <GlowingEffect
+                    spread={25}
+                    glow={true}
+                    disabled={false}
+                    proximity={40}
+                    inactiveZone={0.2}
+                    borderWidth={1.5}
+                    movementDuration={2}
+                    variant="white"
+                  />
+                  <Link href={module.href}>
+                    <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 border-dashed relative`}>
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
@@ -370,9 +393,10 @@ const DashboardLanding = () => {
                           ))}
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
-                </Link>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </div>
               )
             })}
           </div>
