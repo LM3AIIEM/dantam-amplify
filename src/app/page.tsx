@@ -233,42 +233,6 @@ const DashboardLanding = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* System Status Overview */}
-        <div className="mb-12">
-          <Card className="border-blue-200 bg-blue-50">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <BarChart3 className="h-6 w-6 text-blue-600" />
-                  <h2 className="text-xl font-semibold text-blue-900">System Status</h2>
-                </div>
-                <Badge className="bg-green-100 text-green-800">
-                  <CheckCircle2 className="h-4 w-4 mr-1" />
-                  All Systems Operational
-                </Badge>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">8</div>
-                  <div className="text-sm text-blue-700">Active Modules</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">0</div>
-                  <div className="text-sm text-blue-700">In Development</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">83%</div>
-                  <div className="text-sm text-blue-700">Overall Progress</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">16</div>
-                  <div className="text-sm text-blue-700">Components Ready</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* Module Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
           {modules.map((module) => {
@@ -413,40 +377,6 @@ const DashboardLanding = () => {
             })}
           </div>
         </div>
-
-        {/* Development Notes */}
-        <Card className="border-amber-200 bg-amber-50">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-amber-800">
-              <AlertTriangle className="h-5 w-5" />
-              Development Status & Notes
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-amber-800 mb-2">🟢 Ready for Testing:</h4>
-                <ul className="text-sm text-amber-700 space-y-1">
-                  <li>• Scheduling module (refactored & optimized)</li>
-                  <li>• Finance module (100% refactored, 79% size reduction)</li>
-                  <li>• Clinical Charting (interactive tooth diagrams)</li>
-                  <li>• Communication Hub (multi-channel messaging)</li>
-                  <li>• Digital Prescriptions (e-prescription system)</li>
-                  <li>• Inventory Management (stock tracking & alerts)</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-amber-800 mb-2">🟡 Next Steps:</h4>
-                <ul className="text-sm text-amber-700 space-y-1">
-                  <li>• Refactor Patient Management module</li>
-                  <li>• Apply systematic refactoring to new modules</li>
-                  <li>• Cross-module integration testing</li>
-                  <li>• Performance optimization</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </div>
   )
