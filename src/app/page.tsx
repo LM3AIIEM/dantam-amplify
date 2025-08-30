@@ -239,18 +239,19 @@ const DashboardLanding = () => {
           {modules.map((module) => {
             const IconComponent = module.icon
             return (
-              <div key={module.id} className="relative">
-                <GlowingEffect
-                  spread={30}
-                  glow={true}
-                  disabled={false}
-                  proximity={48}
-                  inactiveZone={0.1}
-                  borderWidth={2}
-                  movementDuration={1.5}
-                />
-                <Link href={module.href}>
-                  <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 relative`}>
+              <Link key={module.id} href={module.href}>
+                <div className="relative rounded-xl">
+                  <GlowingEffect
+                    spread={30}
+                    glow={true}
+                    disabled={false}
+                    proximity={48}
+                    inactiveZone={0.1}
+                    borderWidth={2}
+                    movementDuration={1.5}
+                    className="rounded-xl"
+                  />
+                  <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 relative rounded-xl`}>
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
@@ -324,8 +325,8 @@ const DashboardLanding = () => {
                     </div>
                     </CardContent>
                   </Card>
-                </Link>
-              </div>
+                </div>
+              </Link>
             )
           })}
         </div>
@@ -345,19 +346,20 @@ const DashboardLanding = () => {
             {legacyMockModules.map((module) => {
               const IconComponent = module.icon
               return (
-                <div key={module.id} className="relative">
-                  <GlowingEffect
-                    spread={25}
-                    glow={true}
-                    disabled={false}
-                    proximity={40}
-                    inactiveZone={0.2}
-                    borderWidth={1.5}
-                    movementDuration={2}
-                    variant="white"
-                  />
-                  <Link href={module.href}>
-                    <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 border-dashed relative`}>
+                <Link key={module.id} href={module.href}>
+                  <div className="relative rounded-xl">
+                    <GlowingEffect
+                      spread={25}
+                      glow={true}
+                      disabled={false}
+                      proximity={40}
+                      inactiveZone={0.2}
+                      borderWidth={1.5}
+                      movementDuration={2}
+                      variant="white"
+                      className="rounded-xl"
+                    />
+                    <Card className={`${module.color} hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105 border-dashed relative rounded-xl`}>
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
@@ -395,8 +397,8 @@ const DashboardLanding = () => {
                       </div>
                       </CardContent>
                     </Card>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               )
             })}
           </div>
