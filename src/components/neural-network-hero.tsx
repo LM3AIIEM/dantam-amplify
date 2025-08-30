@@ -150,11 +150,7 @@ const fragmentShader = `
   
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    vec4 color = cppn_fn(uv, 0.15 * sin(0.4 * iTime), 0.15 * sin(0.8 * iTime), 0.15 * sin(0.6 * iTime));
-    // Invert colors for light theme and increase contrast
-    color = 1.0 - color;
-    color = color * 1.5; // Boost intensity
-    gl_FragColor = vec4(color.rgb, 1.0);
+    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
   }
 `;
 
@@ -178,8 +174,8 @@ function ShaderPlane() {
   });
 
   return (
-    <mesh ref={meshRef} position={[0, 0, -1]}>
-      <planeGeometry args={[12, 8]} />
+    <mesh ref={meshRef} position={[0, -0.75, -0.5]}>
+      <planeGeometry args={[4, 4]} />
       <cPPNShaderMaterial ref={materialRef} side={THREE.DoubleSide} />
     </mesh>
   );
@@ -188,7 +184,7 @@ function ShaderPlane() {
 function ShaderBackground() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
   
-  const camera = useMemo(() => ({ position: [0, 0, 1.5] as [number, number, number], fov: 90, near: 0.1, far: 1000 }), []);
+  const camera = useMemo(() => ({ position: [0, 0, 1] as [number, number, number], fov: 75, near: 0.1, far: 1000 }), []);
   
   useGSAP(
     () => {
@@ -213,16 +209,16 @@ function ShaderBackground() {
   );
   
   return (
-    <div ref={canvasRef} className="absolute inset-0 w-full h-full" aria-hidden>
+    <div ref={canvasRef} className="bg-black absolute inset-0 -z-10 w-full h-full" aria-hidden>
       <Canvas
         camera={camera}
         gl={{ antialias: true, alpha: false }}
         dpr={[1, 2]}
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        style={{ width: '100%', height: '100%' }}
       >
         <ShaderPlane />
       </Canvas>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-50/40 via-white/20 to-slate-50/60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
     </div>
   );
 }
@@ -330,17 +326,17 @@ export default function Hero({
       <ShaderBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
-        <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 backdrop-blur-sm shadow-sm">
-          <span className="text-[10px] font-light uppercase tracking-[0.08em] text-slate-600">{badgeLabel}</span>
-          <span className="h-1 w-1 rounded-full bg-slate-400" />
-          <span className="text-xs font-light tracking-tight text-slate-700">{badgeText}</span>
+        <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
+          <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
+          <span className="h-1 w-1 rounded-full bg-white/40" />
+          <span className="text-xs font-light tracking-tight text-white/80">{badgeText}</span>
         </div>
 
-        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
+        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl">
           {title}
         </h1>
 
-        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-slate-700 sm:text-lg">
+        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
           {description}
         </p>
 
@@ -349,10 +345,10 @@ export default function Hero({
             <a
               key={index}
               href={button.href}
-              className={`rounded-2xl border px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-slate-300 duration-300 ${
+              className={`rounded-2xl border border-white/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 duration-300 ${
                 button.primary
-                  ? "bg-slate-900 text-white border-slate-900 hover:bg-slate-800 shadow-lg"
-                  : "text-slate-700 border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-white/70 shadow-sm"
+                  ? "bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+                  : "text-white/80 hover:bg-white/5"
               }`}
             >
               {button.text}
@@ -360,19 +356,19 @@ export default function Hero({
           ))}
         </div>
 
-        <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-slate-600">
+        <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-white/60">
           {microDetails.map((detail, index) => {
             const refMap = [microItem1Ref, microItem2Ref, microItem3Ref];
             return (
               <li key={index} ref={refMap[index]} className="flex items-center gap-2">
-                <span className="h-1 w-1 rounded-full bg-slate-400" /> {detail}
+                <span className="h-1 w-1 rounded-full bg-white/40" /> {detail}
               </li>
             );
           })}
         </ul>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-50 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
     </section>
   );
 }

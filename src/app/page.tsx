@@ -218,13 +218,13 @@ const legacyMockModules = [
 
 const DashboardLanding = () => {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="bg-slate-50">
       {/* Neural Network Hero */}
       <Hero 
         title="DANTAM Dental Practice Management"
         description="Comprehensive suite of integrated modules for modern dental practice management. Built for efficiency, designed for excellence."
-        badgeText="Practice Management"
-        badgeLabel="Pro"
+        badgeText="Ventures"
+        badgeLabel="YOOGI"
         ctaButtons={[
           { text: "Explore Modules", href: "#modules", primary: true },
           { text: "View Prototypes", href: "#prototypes" }
@@ -233,7 +233,7 @@ const DashboardLanding = () => {
       />
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-12" id="modules">
+      <div className="max-w-7xl mx-auto px-6 pt-4 pb-12" id="modules">
         {/* Module Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
           {modules.map((module) => {
@@ -293,36 +293,9 @@ const DashboardLanding = () => {
                   </CardHeader>
                   
                   <CardContent className="pt-0">
-                    <p className="text-slate-700 mb-4">
+                    <p className="text-slate-700">
                       {module.description}
                     </p>
-                    
-                    {/* Progress Bar */}
-                    <div className="mb-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-slate-600">Development Progress</span>
-                        <span className="text-sm text-slate-600">{module.progress}%</span>
-                      </div>
-                      <div className="w-full bg-slate-200 rounded-full h-2">
-                        <div 
-                          className="bg-blue-600 h-2 rounded-full transition-all duration-500" 
-                          style={{ width: `${module.progress}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    {/* Feature List */}
-                    <div className="space-y-2">
-                      <div className="text-sm font-medium text-slate-600 mb-2">Key Features:</div>
-                      <div className="grid grid-cols-2 gap-2">
-                        {module.features.map((feature, index) => (
-                          <div key={index} className="flex items-center gap-2">
-                            <CheckCircle2 className="h-3 w-3 text-green-600" />
-                            <span className="text-xs text-slate-600">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
                     </CardContent>
                   </Card>
                 </div>
@@ -379,22 +352,9 @@ const DashboardLanding = () => {
                     </CardHeader>
                     
                     <CardContent className="pt-0">
-                      <p className="text-slate-700 mb-4">
+                      <p className="text-slate-700">
                         {module.description}
                       </p>
-                      
-                      {/* Feature List */}
-                      <div className="space-y-2">
-                        <div className="text-sm font-medium text-slate-600 mb-2">Features:</div>
-                        <div className="grid grid-cols-2 gap-2">
-                          {module.features.map((feature, index) => (
-                            <div key={index} className="flex items-center gap-2">
-                              <CheckCircle2 className="h-3 w-3 text-yellow-600" />
-                              <span className="text-xs text-slate-600">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
                       </CardContent>
                     </Card>
                   </div>
