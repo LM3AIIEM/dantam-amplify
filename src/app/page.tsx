@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { GlowingEffect } from '@/components/ui/glowing-effect'
+import Hero from '@/components/ui/neural-network-hero'
 import { 
   Calendar, 
   DollarSign, 
@@ -218,22 +219,21 @@ const legacyMockModules = [
 const DashboardLanding = () => {
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Header */}
-      <div className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-slate-900 mb-4">
-              DANTAM Dental Practice Management
-            </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive suite of integrated modules for modern dental practice management
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Neural Network Hero */}
+      <Hero 
+        title="DANTAM Dental Practice Management"
+        description="Comprehensive suite of integrated modules for modern dental practice management. Built for efficiency, designed for excellence."
+        badgeText="Practice Management"
+        badgeLabel="Pro"
+        ctaButtons={[
+          { text: "Explore Modules", href: "#modules", primary: true },
+          { text: "View Prototypes", href: "#prototypes" }
+        ]}
+        microDetails={["Interactive UI", "Real‑time Updates", "Smart Analytics"]}
+      />
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12" id="modules">
         {/* Module Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
           {modules.map((module) => {
@@ -332,7 +332,7 @@ const DashboardLanding = () => {
         </div>
 
         {/* Legacy Mock Modules Section */}
-        <div className="mb-12">
+        <div className="mb-12" id="prototypes">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Development Prototypes & Legacy Modules
